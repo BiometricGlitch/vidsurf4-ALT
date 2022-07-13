@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>VidSurf</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="scrollbar.css" type="text/css" />
+    <link rel="stylesheet" href="loader.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://database-yvthdr56r7gubvcd6f7ghuinjbhcfgubvtcfygubhvgt.netlify.app/vsdb/img/vsdblogotrans.png" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script src="https://kit.fontawesome.com/2485df4897.js" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+   $(window).load(function() {
+   $(".preloader").delay(500).fadeOut("slow");
+   $("#overlayer").delay(500).fadeOut("slow");
+   })
+</script>
+  </head>
+  <body>
+    <div id="overlayer"></div>
+<div class="preloader">
+   <img class="loader" src="https://database-yvthdr56r7gubvcd6f7ghuinjbhcfgubvtcfygubhvgt.netlify.app/vsdb/img/vsdblogotrans.png">  
+   <p> Loading...</p>
+</div>
+    <div id="myNav" class="overlay">
+  <a style="background: #303030; color: white;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a style="background: #303030; color: white; width: 93.5%;">Genres</a>
+    <button onclick="moviesTrending()" style="margin-top: 20px;">Trending</button>
+          <button onclick="moviesAll()">All</button> 
+          <button onclick="moviesAction()">Action</button>
+          <button onclick="moviesAdventure()">Adventure</button>
+          <button onclick="moviesAnimation()">Animation</button>
+          <button onclick="moviesComedy()">Comedy</button>
+          <button onclick="moviesCrime()">Crime</button>
+          <button onclick="moviesDrama()">Drama</button>
+          <button onclick="moviesFamily()">Family</button>
+          <button onclick="moviesHistory()">History</button>
+          <button onclick="moviesFantasy()">Fantasy</button>
+          <button onclick="moviesThriller()">Thriller</button>
+          <button onclick="moviesscifi()">Sci-Fi</button>
+  </div>
+</div>
+    <div id="sortNav" class="overlay">
+  <a style="background: #303030; color: white;" href="javascript:void(0)" class="closebtn" onclick="closesortNav()">&times;</a>
+  <div class="overlay-content">
+    <a style="background: #303030; color: white; width: 93.5%;">Sort By:</a>
+    <button style="margin-top: 20px;" onclick="popularitySort()">Popularity</button>
+    <button onclick="abcSort()">Alphabetical</button>
+    <button onclick="yearSort()">Year</button>
+    <button onclick="rateSort()">Rating</button>
+  </div>
+</div>
+    <div class="leftnav">
+        <!--Top menu -->
+        <div class="sidebar">
+           <h1>VidSurf</h1>
+          <button onclick="moviesTrending()" style="margin-top: 20px;">Trending</button>
+          <button onclick="moviesAll()">All</button> 
+          <button onclick="moviesAction()">Action</button>
+          <button onclick="moviesAdventure()">Adventure</button>
+          <button onclick="moviesAnimation()">Animation</button>
+          <button onclick="moviesComedy()">Comedy</button>
+          <button onclick="moviesCrime()">Crime</button>
+          <button onclick="moviesDrama()">Drama</button>
+          <button onclick="moviesFamily()">Family</button>
+          <button onclick="moviesHistory()">History</button>
+          <button onclick="moviesFantasy()">Fantasy</button>
+          <button onclick="moviesThriller()">Thriller</button>
+          <button onclick="moviesscifi()">Sci-Fi</button>
+          <h2>An orginal by BiometricGlitch</h2>
+        </div>
+
+    </div>
+    <div>
+      <span style="color: white; padding: 5px 5px; font-size: 30px; margin-bottom: 20px;" onclick="openNav()">&#9776; VidSurf</span>
+    </div>
+    <div id="searchForm">
+        <input id="search" type="text" placeholder="Search Movies" />
+        <button class="defaultbutton" onClick="searhMovies()" id="btn-search">Search</button>
+      </div>
+    <div class="moviewrapper">
+      <h1 id="movieGenre" style="transition: 1s;">Animation Movies</h1>
+      <p class="sortParent">Sort by: <button style="background: #cc1821; border: none; color: white;" id="sorterButton" onclick="sortNav()">Year (Default)</button></p>
+      <div id="movies" class="grid"></div>
+         <img class="mvloader" src="https://database-yvthdr56r7gubvcd6f7ghuinjbhcfgubvtcfygubhvgt.netlify.app/vsdb/img/vsdblogotrans.png">  
+    </div>
+    <p id="resultN" style="display: none;">16</p>
+    <p id="sortS" style="display: none;">release_date.desc</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

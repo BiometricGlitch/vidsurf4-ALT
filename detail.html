@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="scrollbar.css" type="text/css" />
+    <link rel="shortcut icon" href="https://database-yvthdr56r7gubvcd6f7ghuinjbhcfgubvtcfygubhvgt.netlify.app/vsdb/img/vsdblogotrans.png" />
+    <title>VidSurf | Stream</title>
+  </head>
+  <body style="scroll-behavior: smooth;">
+    <nav><h3 id="movieTitle">VidSurf | Loading...</h3></nav>
+    <div>
+      <a href="../">Home</a>
+    </div>
+    <section id="viewpoint" class="sec">
+      <div style="color: white;" class="movie-description">
+        <h1 id="original_title">  </h1>
+        <br />
+        <h2>Description:</h2>
+        <p id="overview"></p>
+        <br />
+        <h2>TMDB & IMDB ID:</h2>
+        <p id="movie_id"></p>
+        <iframe allowfullscreen="true" id="vidframe" style="height: 300px; border: none; margin-top: 10px;" src=""></iframe>
+      </div>
+      <div class="movie-img">
+        <img id="myImageID" src="" alt="" />
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="detail.js"></script>
+  </body>
+</html>
+
+
+
+<!--
+<div class="similar-movies">
+      <h1>We do <strong>not</strong> store any of the movies on our servers we only use embeds from 3rd party services.</h1>
+    </div>
+    <div class="similar">
+      <div id="movies" class="grid"></div>
+    </div>
+    -->
